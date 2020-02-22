@@ -270,7 +270,7 @@ p{
     .beers-title{
         background-image: radial-gradient(80px 20px, rgba(0, 0, 0, 0.75), transparent);
     }
-    .menu-title{
+    .menu-title h1{
         background-image: radial-gradient(80px 20px, rgba(0, 0, 0, 0.75), transparent);
     }
 } 
