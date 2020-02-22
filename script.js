@@ -1,63 +1,82 @@
-// // Initialize and add the map
-// function initMap() {
-//   // The location of Uluru
-//   var uluru = {lat: -25.344, lng: 131.036};
-//   // The map, centered at Uluru
-//   var map = new google.maps.Map(
-//       document.getElementById('map'), {zoom: 4, center: uluru});
-//   // The marker, positioned at Uluru
-//   var marker = new google.maps.Marker({position: uluru, map: map});
-// }
-
-// function initMap() {
-// }
-var formBtn = $(".type-btn");
-var bookBtn = $(".bookBtn");
-var menuBtn = $(".menuBtn");
-var genBtn = $(".genBtn");
 var bookingForm = $("#bookingForm");
 var menuForm = $("#menuForm");
-var genForm = $("#generalForm");
+var generalForm = $("#generalForm");
+var activeForm = "";
 
-bookBtn.on("click", function () {
-  $(this).addClass("selected");
-  menuBtn.removeClass("selected");
-  genBtn.removeClass("selected");
-  bookingForm.removeClass("d-none");
+var contactBtns = document.querySelectorAll(".contactBtn");
+contactBtns.forEach(function (btn) {
+  btn.addEventListener("click", function () {
+    $(".contactBtn").removeClass("selected"); // de-select all three buttons
+    btn.classList.add("selected"); // select this button
+
+    activeForm = getFormType(btn);
+    
+    switch (activeForm) {
+      case "booking":
+        showBookingForm();
+        break;
+      case "menu":
+        showMenuForm();
+        break;
+      case "general":
+        showGeneralForm();
+        break;
+    }
+
+    $('input[name="formType"]').val(activeForm); // set the form type to submit so PHP knows what's up
+    $("#submit").removeClass("d-none"); // show submit button
+  });
+});
+
+function getFormType(btn) {
+  if (btn.classList.contains("bookBtn")) {
+    return "booking";
+  }
+  else if (btn.classList.contains("menuBtn")) {
+    return "menu";
+  }
+  else if (btn.classList.contains("genBtn")) {
+    return "general";
+  }
+
+  return "";
+}
+
+function showBookingForm() {
   menuForm.addClass("d-none");
-  genForm.addClass("d-none");
-  $("#Date").prop("required", true);
+  generalForm.addClass("d-none");
+  bookingForm.removeClass("d-none");
+
+  $("#date").prop("required", true);
   $("#time").prop("required", true);
   $("#bookingPeople").prop("required", true);
   $("#bookingMessage").prop("required", true);
-  $("#MenuMessage").removeAttr("required"); 
-  $("#genMessage").removeAttr("required"); 
-})
-menuBtn.on("click", function () {
-  $(this).addClass("selected");
-  bookBtn.removeClass("selected");
-  genBtn.removeClass("selected");
-  menuForm.removeClass("d-none");
+  $("#menuMessage").removeAttr("required");
+  $("#genMessage").removeAttr("required");
+}
+
+function showMenuForm() {
   bookingForm.addClass("d-none");
-  genForm.addClass("d-none");
-  $("#MenuMessage").prop("required", true);
-  $("#Date").removeAttr("required");
+  generalForm.addClass("d-none");
+  menuForm.removeClass("d-none");
+
+  $("#menuMessage").prop("required", true);
+  $("#date").removeAttr("required");
   $("#time").removeAttr("required");
   $("#bookingPeople").removeAttr("required");
-  $("#bookingMessage").removeAttr("required"); 
-  $("#genMessage").removeAttr("required"); 
-})
-genBtn.on("click", function () {
-  $(this).addClass("selected");
-  bookBtn.removeClass("selected");
-  menuBtn.removeClass("selected");
-  genForm.removeClass("d-none");
+  $("#bookingMessage").removeAttr("required");
+  $("#genMessage").removeAttr("required");
+}
+
+function showGeneralForm() {
   bookingForm.addClass("d-none");
   menuForm.addClass("d-none");
-  $("#genMessage").prop("required");
-  $("#MenuMessage").removeAttr("required");
-  $("#Date").removeAttr("required");
+  generalForm.removeClass("d-none");
+
+  $("#genMessage").prop("required", true);
+  $("#menuMessage").removeAttr("required");
+  $("#date").removeAttr("required");
   $("#time").removeAttr("required");
   $("#bookingPeople").removeAttr("required");
-  $("#bookingMessage").removeAttr("required");  
-})
+  $("#bookingMessage").removeAttr("required");
+}

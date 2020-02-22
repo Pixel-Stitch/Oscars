@@ -51,23 +51,25 @@
   </nav>
   <div class="parallax-window relative" data-parallax="scroll" data-image-src="images/phone.jpg">
     <div class="container">
-        <div class="row justify-content-center align-items-center">
-            <h1 class="text-white absolute page-title">Contact Us</h1>
-        </div>
-    </div> 
+      <div class="row justify-content-center align-items-center">
+        <h1 class="text-white absolute page-title">Contact Us</h1>
+      </div>
+    </div>
   </div>
   <div class="container">
     <h2 class="text-center mt-5">We'd love to hear from you!</h2>
     <p class="text-center py-4" style="font-size: 26px;">Come and find us</p>
-    <div class="mx-auto" id="map"></div>
+    <div class="mx-auto" id="map">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2397.096711158076!2d-0.8064192838410847!3d53.07253600288554!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4879b533a818bba9%3A0x622714dc3c81e8f2!2sOscar&#39;s%20Inn!5e0!3m2!1sen!2suk!4v1582388920372!5m2!1sen!2suk"></iframe>
+    </div>
     <!--Form-->
-    <h4 class="mt-5 mb-0 text-center">Contact Form</h4>
+    <h4 id="contactForm" class="mt-5 mb-0 text-center">Contact Form</h4>
     <p class="text-center"><small><i>
-      Please allow up to 24 hours for a response.<br>
-      If no response after this time, make sure to check your spam folder or give us a ring on 01636 918130.<br>
-      Please note: this is not an automated process and one of our team will get back to you as soon as
-      possible.
-    </i></small></p>
+          Please allow up to 24 hours for a response.<br>
+          If no response after this time, make sure to check your spam folder or give us a ring on 01636 918130.<br>
+          Please note: this is not an automated process and one of our team will get back to you as soon as
+          possible.
+        </i></small></p>
     <form action="ContactForm.php" method="POST" class="my-5 w-75 mx-auto">
       <div class="form-row my-3">
         <div class="col-2">
@@ -83,7 +85,7 @@
           <input type="text" class="form-control" name="firstName" placeholder="First Name">
         </div>
         <div class="col-5">
-          <input type="text" class="form-control" name="lastName" placeholder="Last Name">
+          <input type="text" class="form-control" name="lastName" placeholder="Last Name" required>
         </div>
       </div>
       <div class="form-row my-3">
@@ -94,9 +96,9 @@
       <h6 class="mt-4 mb-0 text-center"><b>Type of Enquiry</b></h6>
       <p class="text-center"><small><i>Please select one</i></small></p>
       <div class="form-row my-3 d-flex justify-content-center">
-        <a class="btn bookBtn type-btn mr-3" href="javascript:void(0)">Booking</a>
-        <a class="btn menuBtn type-btn mr-3" href="javascript:void(0)">Food/Drink</a>
-        <a class="btn genBtn type-btn" href="javascript:void(0)">General</a>
+        <a class="btn contactBtn bookBtn type-btn mr-3" href="javascript:void(0)">Booking</a>
+        <a class="btn contactBtn menuBtn type-btn mr-3" href="javascript:void(0)">Food/Drink</a>
+        <a class="btn contactBtn genBtn type-btn" href="javascript:void(0)">General</a>
       </div>
       <!--Booking Enquiry-->
       <div class="d-none my-5" id="bookingForm">
@@ -106,10 +108,10 @@
             </i></small></p>
         <div class="form-row d-flex justify-content-around">
           <div class="col-4">
-            <input type="date" id="date" class="form-control"  placeholder="DD/MM/YYYY" required>
+            <input type="date" id="date" class="form-control" placeholder="DD/MM/YYYY" required>
           </div>
           <div class="col-4">
-            <select name="BookingTime" id="time" Class="form-control">
+            <select name="BookingTime" id="time" class="form-control">
               <option value="Time" selected disabled>Time</option>
               <option value="12">12:00</option>
               <option value="12:30">12:30</option>
@@ -150,17 +152,16 @@
         </a>
         <div class="form-row">
           <div class="col-4">
-            <select name="menuType" id="MenuType" class="form-control">
+            <select name="menuType" id="menuType" class="form-control">
               <option value="Main">Main Menu</option>
               <option value="Sunday">Sunday Menu</option>
               <option value="Sandwich">Sandwich Menu</option>
               <option value="Drinks">Drinks Menu</option>
-
             </select>
           </div>
         </div>
         <div class="form-row my-4">
-          <textarea name="menuMessage" id="MenuMessage" class="form-control" cols="30" rows="5"
+          <textarea name="menuMessage" id="menuMessage" class="form-control" cols="30" rows="5"
             placeholder="What would you like to know?"></textarea>
         </div>
       </div>
@@ -168,42 +169,42 @@
       <div class="d-none my-5" id="generalForm">
         <h6><b>How can we help?</b></h6>
         <div class="form-row my-4">
-          <textarea name="menuMessage" id="genMessage" cols="30" rows="5" class="form-control"
+          <textarea name="genMessage" id="genMessage" cols="30" rows="5" class="form-control"
             placeholder="Message..."></textarea>
         </div>
       </div>
       <div class="text-center">
-        <button value="SEND" name="submit" id="submit" class="btn type-btn px-3 selected">SEND</button>
+        <input type="hidden" id="formType" name="formType">
+        <button value="SEND" name="submit" id="submit" class="btn type-btn px-3 selected d-none">SEND</button>
       </div>
     </form>
   </div>
   <footer>
     <hr class="p-0" style="border-color: rgb(11, 29, 12); width:100%;">
-    <p class="text-center">01636 918130<span class="px-4">105 Balderton Gate, Newark, NG24 1RY </span><span class="pr-4">enquiries@oscarsinn.co.uk</span></p>
+    <p class="text-center">01636 918130<span class="px-4">105 Balderton Gate, Newark, NG24 1RY </span><span
+        class="pr-4">enquiries@oscarsinn.co.uk</span></p>
     <div class="footer w-100 p-4 text-white">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="mr-auto">
-                    <i class="fab fa-facebook-square px-3"></i>
-                    <i class="fab fa-twitter-square px-3"></i>
-                    <i class="fab fa-instagram px-3"></i>
-                </div>
-                <div class="mx-auto">
-                    <img src="images/whiteDogIcon.png" alt="oscar" class="img-fluid" width="60px">
-                </div>
-                <div class="ml-auto pr-4">
-                    <p><b><u>Opening Hours</u></b><br>
-                    <b>Sunday-Thursday:</b> 12:00 - 23:00<br>
-                    <b>Friday - Saturday:</b> 12:00 - 00:00</p>
-                </div>
-            </div>
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="mr-auto">
+            <i class="fab fa-facebook-square px-3"></i>
+            <i class="fab fa-twitter-square px-3"></i>
+            <i class="fab fa-instagram px-3"></i>
+          </div>
+          <div class="mx-auto">
+            <img src="images/whiteDogIcon.png" alt="oscar" class="img-fluid" width="60px">
+          </div>
+          <div class="ml-auto pr-4">
+            <p><b><u>Opening Hours</u></b><br>
+              <b>Sunday-Thursday:</b> 12:00 - 23:00<br>
+              <b>Friday - Saturday:</b> 12:00 - 00:00</p>
+          </div>
         </div>
+      </div>
     </div>
-</footer>
+  </footer>
 
 </body>
-<script async defer src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap">
-</script>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
   integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
