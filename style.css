@@ -1,0 +1,198 @@
+@font-face {
+    font-family: 'Playfair Display';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/playfairdisplay/v20/nuFvD-vYSZviVYUb_rj3ij__anPXJzDwcbmjWBN2PKdFvXDXbtM.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  }
+  h1, h2, h3, h4, h5, h6{
+    font-family: 'playfair display';
+    text-transform: uppercase;
+}
+p{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.relative{
+    position: relative;
+}
+.absolute{
+    position: absolute;
+}
+.nav-link{
+    font-family: 'playfair display';
+    text-transform: uppercase;
+    color: black !important;
+    font-size: 1.3rem;
+}
+.nav-link:hover{
+    color: rgb(11, 29, 12);
+}
+.navbar-toggler, .toggler-icon{
+    border:none;
+    color:black;
+    font-size: 36px;
+}
+.active{
+    border-top: 1px solid rgb(11, 29, 12);
+    border-bottom: 1px solid rgb(11, 29, 12);
+}
+.parallax-window {
+    height:550px;
+    min-height: 200px;
+    background: transparent;
+}
+.home-title{
+    font-size: 80px;
+    text-transform: uppercase;
+}
+.home-hr{
+    margin-top: 5%;
+    width:40%;
+    border-color:rgb(11, 29, 12);
+    border-width: 2px;
+}
+.cards{
+    margin: 10% 0%;
+}
+    .cards img{
+        box-shadow: 0px 10px 20px rgba(0,0,0,0.19), 0px 6px 6px rgba(0,0,0,0.23);
+    }
+    .cards img:hover{
+        box-shadow: 0px 14px 28px rgba(0,0,0,0.25), 0px 10px 10px rgba(0,0,0,0.22);
+    }
+.card-text{
+    color: white;
+    top:25%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    background-image: radial-gradient(75px 25px, rgba(0, 0, 0, 0.5), transparent)
+
+}
+.home-news p:first-of-type, .home-news a{
+    font-size:24px;
+    color:black;
+}
+.home-news a:hover{
+    color: rgb(11, 29, 12);
+}
+.page-titles{
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+}
+.page-title{
+    position:absolute;
+    transform: translate(-50%,-50%);
+    top:50%;
+    left:50%;
+    font-size:6rem;
+}
+.page-subtitle{
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top:55%;
+    left:50%;
+}
+.vouchers{
+    background-image: url('images/gift.jpg');
+    background-size:cover;
+    background-repeat: no-repeat;
+}
+   .vouchers p:first-of-type{
+    font-size:28px;
+   }
+   .vouchers p:nth-of-type(2){
+       font-size: 24px;
+       background-color: rgba(0, 0, 0, 0.6);
+       border-radius: 20px;
+   }
+   .vouchers img{
+       box-shadow: 5px 10px 5px 5px rgba(0, 0, 0, 0.3);
+   }
+/*beers*/
+.beers-title{
+    background-image: radial-gradient(180px 50px, rgba(0, 0, 0, 0.75), transparent);}
+/*MENU PAGE*/
+.menu-title h1{
+    background-image: radial-gradient(180px 50px, rgba(0, 0, 0, 0.7), transparent);
+}
+.card-header{
+    background-color: rgb(11, 29, 12);
+}
+.card-body{
+    background-color: rgba(4, 199, 17, 0.11);
+}
+.card-body p{
+    padding: 15px;
+    text-align: center;
+}
+.menu-hr{
+    width:30%;
+    border-color: black;
+}
+.btn-link{
+    color: white;
+    width: 100%;
+    font-family: 'playfair display';
+    text-transform: uppercase;
+    padding:10px 0px;
+}
+.btn-link:hover{
+    color:white;
+}
+.allergies{
+    background-color:  rgba(138, 116, 99, 0.3);
+    width:70%;
+}
+.card-header .mum{
+    background-color: rgb(65, 3, 34);
+}
+.card-body .mum{
+    background-color: rgba(65, 3, 34, 0.363);
+}
+/*oscar*/
+.oscar-title h1{
+    background-image: radial-gradient(180px 50px, rgba(0, 0, 0, 0.2), transparent);
+}
+/*calender*/
+.event{
+    background-color: rgba(138, 116, 99, 0.3);
+}
+.date{
+    background-color: white;
+}
+/*latest news*/
+
+/*contact*/
+.type-btn{
+    background-color: white;
+    border: 2px #6b5747 solid;     
+}
+.selected{
+    background-color:#6b5747;
+    color:white;
+}
+#map {
+    height: 400px; 
+    width: 75%;
+    background-color: #f1f1f1;
+   }
+/*footer*/
+   .footer{
+       background-color: rgb(11, 29, 12);
+   }
+   .fab{
+       font-size: 40px;
+   }
+   .sexyButt{
+       padding:10px 15px;
+       font-size: 20px;
+       background-image: linear-gradient(rgb(179, 231, 252), rgb(140, 188, 207));
+       border-radius: 20px;
+       border:none;
+       box-shadow: 0px 5px 7px rgba(0,0,0,0.19), 0px 5px 7px rgba(0,0,0,0.23);
+   }
+
+   
