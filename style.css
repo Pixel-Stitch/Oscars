@@ -186,13 +186,5 @@ p{
    .fab{
        font-size: 40px;
    }
-   .sexyButt{
-       padding:10px 15px;
-       font-size: 20px;
-       background-image: linear-gradient(rgb(179, 231, 252), rgb(140, 188, 207));
-       border-radius: 20px;
-       border:none;
-       box-shadow: 0px 5px 7px rgba(0,0,0,0.19), 0px 5px 7px rgba(0,0,0,0.23);
-   }
 
    
