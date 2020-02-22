@@ -264,6 +264,15 @@ p{
     .date{
         font-size: 20px;
     }
+    .oscar-title h1{
+        background-image: radial-gradient(90px 30px, rgba(0, 0, 0, 0.2), transparent);
+    }
+    .beers-title{
+        background-image: radial-gradient(80px 20px, rgba(0, 0, 0, 0.75), transparent);
+    }
+    .menu-title{
+        background-image: radial-gradient(80px 20px, rgba(0, 0, 0, 0.75), transparent);
+    }
 } 
 /*tablet*/
 @media screen and (min-width:768px) and (max-width: 992px){
@@ -281,5 +290,11 @@ p{
     }
     .home-p{
         width: 98%;
+    }
+    .beers-title{
+        background-image: radial-gradient(140px 40px, rgba(0, 0, 0, 0.75), transparent);
+    }
+    .menu-title{
+        background-image: radial-gradient(140px 40px, rgba(0, 0, 0, 0.75), transparent);
     }
 }
