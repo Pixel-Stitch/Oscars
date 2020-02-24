@@ -249,6 +249,15 @@ p{
    .fab{
        font-size: 40px;
    }
+   .fa-facebook-square:hover{
+       color: #3b5999;
+   }
+    .fa-twitter-square:hover{
+        color: #55acee;
+    }
+    .fa-instagram:hover{
+        color: #ba3aa9;
+    }
 /*mobile*/
 @media screen and (max-width:767px){
     .home-title-position{
