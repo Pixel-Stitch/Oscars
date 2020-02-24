@@ -190,6 +190,7 @@ p{
 .event{
     background-color: rgba(138, 116, 99, 0.3);
 }
+
 .date{
     background-color: white;
     font-size: 30px;
@@ -197,12 +198,25 @@ p{
 /*latest news*/
 
 /*contact*/
+.text-under-subhead{
+    font-size: 26px;
+}
+#menuForm a{
+    color: black;
+}
+#menuForm a:hover{
+    color: rgb(11, 29, 12);
+}
 .type-btn{
     background-color: white;
-    border: 2px #6b5747 solid;     
+    border: 2px rgb(11, 29, 12) solid; 
+    border-radius: 15px 0px 15px 0px; 
+}
+.type-btn:hover{
+    background-color:rgba(11, 29, 12, 0.3);
 }
 .selected{
-    background-color:#6b5747;
+    background-color:rgb(11, 29, 12);
     color:white;
 }
 #map {
@@ -215,6 +229,9 @@ p{
         height: 100%;
         border: 0;
     }
+.form{
+    width: 60%;
+}
 /*footer*/
    .footer{
        background-color: rgb(11, 29, 12);
@@ -273,6 +290,18 @@ p{
     .menu-title h1{
         background-image: radial-gradient(80px 20px, rgba(0, 0, 0, 0.75), transparent);
     }
+    .event h2{
+        font-size: 1.6rem;
+    }
+    #map{
+        width:100%;
+    }
+    .form{
+        width: 100%;
+    }
+    .text-under-subhead{
+        font-size: 16px;
+    }
 } 
 /*tablet*/
 @media screen and (min-width:768px) and (max-width: 992px){
@@ -296,5 +325,11 @@ p{
     }
     .menu-title h1{
         background-image: radial-gradient(140px 40px, rgba(0, 0, 0, 0.75), transparent);
+    }
+    #map{
+        width:100%;
+    }
+    .form{
+        width: 75%;
     }
 }

@@ -17,34 +17,34 @@
     <nav class="navbar navbar-expand-xl navbar-light bg-white">
         <a class="navbar-brand ml-2 ml-lg-5" href="index.html"><img class="img-fluid" src="images/oscarinnSM.png"
                 alt="oscar inn logo"></a>
-        <button class="navbar-toggler mr-2" type="button" data-toggle="collapse" data-target="#navbarNav"
+        <button class="navbar-toggler mr-2 mr-md-5" type="button" data-toggle="collapse" data-target="#navbarNav"
             aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="toggler-icon"><i class="fas fa-bars"></i></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ml-auto text-center">
-                <li class="nav-item pl-2 pl-md-3 pl-lg-5 py-lg-2 px-xl-3 py-xl-5 d-flex align-items-center">
+                <li class="nav-item pl-2 pl-md-3 pl-lg-5 py-lg-2 px-xl-3 d-flex align-items-center justify-content-center">
                     <a class="nav-link" href="beers.html">Beers</a>
                 </li>
-                <li class="nav-item pl-2 pl-md-3 pl-lg-5 py-lg-2 px-xl-3 py-xl-5 d-flex align-items-center">
+                <li class="nav-item pl-2 pl-md-3 pl-lg-5 py-lg-2 px-xl-3 d-flex align-items-center justify-content-center">
                     <a class="nav-link" href="wines.html">Wines</a>
                 </li>
-                <li class="nav-item pl-2 pl-md-3 pl-lg-5 py-lg-2 px-xl-3 py-xl-5 d-flex align-items-center">
+                <li class="nav-item pl-2 pl-md-3 pl-lg-5 py-lg-2 px-xl-3 d-flex align-items-center justify-content-center">
                     <a class="nav-link" href="menus.html">Menus</a>
                 </li>
-                <li class="nav-item pl-2 pl-md-3 pl-lg-5 py-lg-2 px-xl-3 py-xl-5 d-flex align-items-center">
+                <li class="nav-item pl-2 pl-md-3 pl-lg-5 py-lg-2 px-xl-3 d-flex align-items-center justify-content-center">
                     <a class="nav-link" href="oscar.html">Oscar</a>
                 </li>
-                <li class="nav-item pl-2 pl-md-3 pl-lg-5 py-lg-2 px-xl-3 py-xl-5 d-flex align-items-center">
+                <li class="nav-item pl-2 pl-md-3 pl-lg-5 py-lg-2 px-xl-3 d-flex align-items-center justify-content-center">
                     <a class="nav-link" href="calender.html">Calendar</a>
                 </li>
-                <li class="nav-item pl-2 pl-md-3 pl-lg-5 py-lg-2 px-xl-3 py-xl-5 d-flex align-items-center">
+                <li class="nav-item pl-2 pl-md-3 pl-lg-5 py-lg-2 px-xl-3 d-flex align-items-center justify-content-center">
                     <a class="nav-link" href="news.html">News</a>
                 </li>
-                <li class="nav-item pl-2 pl-md-3 pl-lg-5 py-lg-2 px-xl-3 py-xl-5 d-flex align-items-center">
-                    <a class="nav-link active" href="contact.html">Contact</a>
+                <li class="nav-item active pl-2 pl-md-3 pl-lg-5 py-lg-2 px-xl-3 d-flex align-items-center justify-content-center">
+                    <a class="nav-link" href="contact.html">Contact</a>
                 </li>
-                <li class="nav-item pl-2 pl-md-3 pl-lg-5 py-lg-2 px-xl-3 py-xl-5 d-flex align-items-center">
+                <li class="nav-item pl-2 pl-md-3 pl-lg-5 py-lg-2 px-xl-3 d-flex align-items-center justify-content-center">
                     <a class="nav-link" href="vacancies.html">Vacancies</a>
                 </li>
             </ul>
@@ -58,8 +58,8 @@
     </div>
   </div>
   <div class="container">
-    <h2 class="text-center mt-5">We'd love to hear from you!</h2>
-    <p class="text-center py-4" style="font-size: 26px;">Come and find us</p>
+    <h2 class="text-center mt-5 text-under-head">We'd love to hear from you!</h2>
+    <p class="text-center text-under-subhead py-4" >Come and find us</p>
     <div class="mx-auto" id="map">
       <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2397.096711158076!2d-0.8064192838410847!3d53.07253600288554!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4879b533a818bba9%3A0x622714dc3c81e8f2!2sOscar&#39;s%20Inn!5e0!3m2!1sen!2suk!4v1582388920372!5m2!1sen!2suk"></iframe>
     </div>
@@ -71,9 +71,9 @@
           Please note: this is not an automated process and one of our team will get back to you as soon as
           possible.
         </i></small></p>
-    <form action="ContactForm.php" method="POST" class="my-5 w-75 mx-auto">
+    <form action="ContactForm.php" method="POST" class="form my-5 mx-auto">
       <div class="form-row my-3">
-        <div class="col-2">
+        <div class="col-4 col-md-2">
           <select name="Title" id="title" class="form-control">
             <option value="Mr">Mr</option>
             <option value="Mrs">Mrs</option>
@@ -82,10 +82,10 @@
             <option value=""></option>
           </select>
         </div>
-        <div class="col-5">
+        <div class="col-8 col-md-5">
           <input type="text" class="form-control" name="firstName" placeholder="First Name">
         </div>
-        <div class="col-5">
+        <div class="mt-3 mt-md-0 col-md-5">
           <input type="text" class="form-control" name="lastName" placeholder="Last Name" required>
         </div>
       </div>
@@ -97,14 +97,15 @@
       <h6 class="mt-4 mb-0 text-center"><b>Type of Enquiry</b></h6>
       <p class="text-center"><small><i>Please select one</i></small></p>
       <div class="form-row my-3 d-flex justify-content-center">
-        <a class="btn contactBtn bookBtn type-btn mr-3" href="javascript:void(0)">Booking</a>
-        <a class="btn contactBtn menuBtn type-btn mr-3" href="javascript:void(0)">Food/Drink</a>
+        <a class="btn contactBtn bookBtn type-btn mr-2 mr-md-3" href="javascript:void(0)">Booking</a>
+        <a class="btn contactBtn menuBtn type-btn mr-2 mr-md-3" href="javascript:void(0)">Food/Drink</a>
         <a class="btn contactBtn genBtn type-btn" href="javascript:void(0)">General</a>
       </div>
       <!--Booking Enquiry-->
       <div class="d-none my-5" id="bookingForm">
         <h6 class="mb-0"><b>We just need a few more details</b></h6>
         <p><small><i>
+          Please call 01636 918130 for booking of more than 6 people.<br>
               Please allow up to 24 hours to confirm your booking enquiry is available.
             </i></small></p>
         <div class="form-row d-flex justify-content-around">
@@ -136,8 +137,7 @@
             </select>
           </div>
           <div class="col-4">
-            <input type="number" id="people" step="1" min="1" max="6" class="form-control" placeholder="No. of people"
-              required>
+            <input type="number" id="people" step="1" min="1" max="6" class="form-control" placeholder="No. of people" required>
           </div>
         </div>
         <div class="form-row my-3">
@@ -149,7 +149,7 @@
       <div class="d-none my-5" id="menuForm">
         <h6 class="mb-0"><b>Which Menu is this regarding?</b></h6>
         <a href="menus.html" target="_blank">
-          <p class="mb-0"><small><i>Remind yourself of our menus (opens new tab).</i></small></p>
+          <p class="mb-0"><small><i>Remind yourself of our menus here (opens new tab).</i></small></p>
         </a>
         <div class="form-row">
           <div class="col-4">
