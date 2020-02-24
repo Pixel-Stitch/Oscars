@@ -49,6 +49,16 @@ p{
     min-height: 200px;
     background: transparent;
 }
+.type-btn-pink{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color:white;
+    background-color:rgb(131, 8, 80);
+    border: 2px rgb(131, 8, 80) solid; 
+    border-radius: 15px 0px 15px 0px; 
+}
+.type-btn-pink:hover{
+    color: white;
+}
 .home-title-position{
     position:absolute;
     transform: translate(-50%,-50%);
